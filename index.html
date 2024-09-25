@@ -95,7 +95,7 @@
         var dsAnimation, ds2Animation;
 
         // Add a click event listener to trigger animations and audio
-        window.handleScreenClick('click', function() {
+        window.addEventListener('click', function() {
             // Remove the event listener after first click to avoid multiple triggers
             window.removeEventListener('click', arguments.callee);
             window.removeEventListener('touchstart', handleScreenClick);
