@@ -95,10 +95,10 @@
         var dsAnimation, ds2Animation;
 
         // Add a click event listener to trigger animations and audio
-        window.addEventListener('click', function() {
+        window.handleScreenClick('click', function() {
             // Remove the event listener after first click to avoid multiple triggers
             window.removeEventListener('click', arguments.callee);
-
+            window.removeEventListener('touchstart', handleScreenClick);
             // Load forest animation
             var forestAnimation = lottie.loadAnimation({
                 container: document.getElementById('forest-animation'),
