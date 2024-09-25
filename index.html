@@ -144,6 +144,9 @@
                 });
             }, 2000); // Start DS2 after a 2-second delay
         });
+// Add event listeners for both click (desktop) and touchstart (mobile)
+        window.addEventListener('click', handleScreenClick);
+        window.addEventListener('touchstart', handleScreenClick);
 
     </script>
 
